@@ -4,8 +4,6 @@ This project is an end-to-end **BERT** model that classifies news articles as "R
 
 ---
 
-###  Live Demo
+### 🚀 Live Demo
 
-**(https://fake-news-detector-bert.streamlit.app/)**
-
----
+**[View the live application here!](https://fake-news-detector-bert.streamlit.app/)**
