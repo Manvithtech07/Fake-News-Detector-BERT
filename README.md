@@ -1,6 +1,6 @@
 ## fake-news-detector-BERT
 
-This project is an end-to-end **BERT** model that classifies news articles as "Real" or "Fake," deployed as a live web app with **Streamlit**.
+A Deep Learning application that classifies news articles as credible or fabricated. This project involves preprocessing raw text data, fine-tuning a state-of-the-art BERT model and deploying it as an interactive web application using Streamlit.
 
 ---
 
