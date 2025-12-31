@@ -11,14 +11,13 @@ nltk.download('wordnet', quiet=True)
 
 @st.cache_resource
 def load_model():
-    """Loads the fine-tuned BERT model and tokenizer from the saved directory."""
     try:
         model_path = './saved_model'
         model = TFBertForSequenceClassification.from_pretrained(model_path)
         tokenizer = BertTokenizer.from_pretrained(model_path)
         return model, tokenizer
     except OSError:
-        st.error("Model not found. Ensure the 'saved_model' directory is in the same folder as app.py.")
+        st.error("Model not found.")
         return None, None
 
 model, tokenizer = load_model()
