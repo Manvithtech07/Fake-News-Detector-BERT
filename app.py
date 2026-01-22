@@ -26,7 +26,6 @@ lemmatizer = WordNetLemmatizer()
 stop_words = set(stopwords.words('english'))
 
 def preprocess_text(text):
-    """Cleans and preprocesses the input text."""
     text = str(text).lower()
     text = re.sub(r'https?://\S+|www\.\S+|@\w+|#\w+', '', text) # Remove URLs, mentions, hashtags
     text = re.sub(r'[^\w\s]', '', text) # Remove punctuation
@@ -43,7 +42,7 @@ user_input = st.text_area("Enter a news article or text to analyze:", "", height
 if st.button("Analyze News"):
     if model is not None and tokenizer is not None:
         if user_input.strip():
-            with st.spinner('Analyzing... This may take a moment.'):
+            with st.spinner('Analyzing'):
                 cleaned_input = preprocess_text(user_input)
 
                 inputs = tokenizer(cleaned_input, max_length=128, padding='max_length', truncation=True, return_tensors="tf")
